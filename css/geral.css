@@ -1,0 +1,414 @@
+/* geral.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins';
+}
+
+.poppins *{
+    font-family: 'Poppins', Poppins, monospace !important;
+}
+
+.roboto *{
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.opensans *{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+
+.verdana * {
+    font-family: 'Verdana', sans-serif !important;
+}
+
+
+.courierbtn {
+    font-family: 'Poppins', Poppins, monospace !important;
+}
+
+.opensansbtn {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.lorabtn{
+    font-family: 'Verdana', serif !important;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#iconGallery {
+    width: 25px;
+    height: 25px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Altera-se para justify-content: flex-start */
+    align-items: center;
+    padding: 20px;
+    background-color: #fff; /* Opcional: cor de fundo do cabeçalho */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+header a {
+    display: flex;
+    align-items: center; /* Garante o alinhamento vertical correto do ícone e do título */
+}
+
+header h1 {
+    font-size: 24px;
+    margin-left: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.header-right {
+    margin-left: auto; /* Empurra o conteúdo da direita para o final do cabeçalho */
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.profile-icon img{
+    width: 24px;
+    height: auto;
+}
+
+.profile-icon {
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.profile-pop{
+    display: none; /* Inicialmente escondido */
+    position:fixed;
+    top:60px;
+    right:20px;
+    background-color:rgb(95, 95, 95);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    padding:10px;
+}
+
+.profile-pop ul{
+    list-style-type: none;
+}
+
+.profile-pop li{
+    margin-bottom: 7px;  
+}
+
+/* Adjustments for a fixed sidebar */
+.sidebar {
+    position: fixed;
+    top: 85px; /* Adjust this to match the height of the header */
+    left: 0;
+    height: calc(100vh - 70px); /* Makes sidebar height responsive to header height */
+    width: auto;
+    padding: 20px;
+    overflow-y: auto; /* Allows sidebar content to scroll */
+    background-color: #fff; /* Optional: set background color */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust main content area */
+.container {
+    display: flex;
+    margin-top: 60px; /* Adjust to match the header height */
+    margin-left: 200px;
+    flex-direction: column;
+}
+
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.lixo img{
+    height: 13px;
+    width: auto; 
+
+}
+
+.menu {
+    list-style: none;
+    font-size: 26px;
+}
+
+.menu li {
+    padding: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    word-wrap: break-word; /* Permite a quebra de linha */
+    max-width: 180px; /* Define uma largura máxima para que o texto quebre quando necessário */
+    white-space: normal; /* Permite o texto ocupar várias linhas */
+}
+
+
+.menu li.album-main {
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    padding-top: 40px;
+}
+
+
+.albums h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.album-list {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.album-list img{
+    height: 104px;
+    width: auto; 
+
+}
+
+.album {
+    width: 11.1111vw;
+    height: auto; /* Define a altura fixa para a div do álbum */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha os itens ao topo */
+    font-size: 16px;
+    text-align: center;
+    padding-left: 50px;
+    margin-right: 60px;
+}
+
+.album img {
+    height: 120px;
+    width: auto;
+}
+
+.album p {
+    margin-top: 5px; /* Espaço entre a imagem e o texto */
+    font-size: 16px;
+    color: #333; /* Cor do texto */
+    margin-bottom: 0; /* Remove margem extra abaixo do texto */
+}
+
+.album-main img{
+    height: 13px;
+    width: auto; 
+
+}
+
+.photos {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+    gap: 10px;
+}
+
+/*when the picture is not horizontal it'll fill the rest of the space*/
+.photo {
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    position: relative;
+}
+
+.photo img {
+    width: 190px;
+    height: 120px;
+    object-fit: cover; /* Garante que a imagem preencha a área sem distorção */
+    margin: 10px;
+    max-width: 100%; /* Impede que a imagem ultrapasse a largura disponível */
+    max-height: 100%; /* Impede que a imagem ultrapasse a altura disponível */
+}
+
+.photo :hover{
+    filter: brightness(0.8);
+    transition: 0.3s;    
+}
+
+.photo .overlay-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+.photo.show-icon .overlay-icon {
+    display: block;
+}
+
+
+
+
+/* FAB styling */
+.fab-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.fab {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    font-size: 24px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 5px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
+}
+
+.fab img{
+    height: 39px;
+    width: auto;
+}
+
+.albuns.hidden {
+    display: none;
+}
+
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px) scale(0.7);
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.4s ease;
+}
+
+/* Estilo para a animação quando ativado */
+.fab-container.open .fab.hidden {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.fab-container.closing .fab.hidden {
+    opacity: 0;
+    transform: translateY(30px) scale(0.7);
+    pointer-events: none;
+}
+
+#trash {
+    transition-delay: 0.05s;
+}
+
+#share {
+    transition-delay: 0.1s;
+}
+
+#add-folder {
+    transition-delay: 0.15s;
+}
+
+#upload {
+    transition-delay: 0.2s;
+}
+
+.fab-container.closing #trash {
+    transition-delay: 0.2s;
+}
+
+.fab-container.closing #share {
+    transition-delay: 0.15s;
+}
+
+.fab-container.closing #add-folder {
+    transition-delay: 0.1s;
+}
+
+.fab-container.closing #upload {
+    transition-delay: 0.05s;
+}
+
+
+.albumList.show {
+    display: flex; /* Mostra quando a classe 'show' é adicionada */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.albumList:not(.show) {
+    opacity: 0;
+    transform: translateY(30px); /* Move para fora da tela enquanto está oculto */
+}
+
+.themes{
+    margin-top: 100px;
+    margin-bottom:20px;
+}
+
+.text-fonts{
+    margin-top: 20px;
+}
+
+
+#albumMain h2{
+    font-size: 32px;
+    align-self: center;
+}
+
+#restore {
+    position: relative;
+    float: right;
+    top: -90px;
+    right: 18px;
+}
+
+
+
+.lixo {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center-align the image and text */
+  }
+  
+  .lixo a {
+    margin-right: 10px; /* Optional: Adds space between the text and the image */
+  }
+

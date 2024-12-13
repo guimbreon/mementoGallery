@@ -1,0 +1,390 @@
+/*STYLE DO POP UP DA IMAGEM COM METADADOS*/
+
+#pop-up {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darken the background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures the overlay covers the page */
+}
+
+/* Style do pop-up com a imagem e metadados */
+.popup-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  cursor: pointer; /* Adiciona um cursor para indicar interatividade */
+  transition: all 0.3s ease; /* Animações suaves */
+}
+
+/* Quando a imagem estiver no modo fullscreen */
+.popup-image.show img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ocupar a largura inteira da tela */
+  height: 100vh; /* Ocupar a altura inteira da tela */
+  object-fit: cover; /* Garantir que a imagem se ajuste corretamente */
+  z-index: 9999;
+  transition: all 0.3s ease; /* Animação suave */
+}
+
+/* Efeito de hover apenas fora do modo fullscreen */
+.image-container img:not(.popup-image.show img) {
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.05); /* Aumentar a imagem levemente */
+}
+
+#popup-image {
+  animation: fadeIn 0.6s ease;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.image-container {
+  position: relative;
+  height: 100%;
+  background-color: black;
+  z-index: 1000;
+}
+
+.popup-imageInfo {
+  background-color: white;
+  display:flex;
+  min-width: 50%;
+  height: 60%;
+  z-index: 999;
+}
+
+/* ------------------------------------------------------------ 
+/* The actual content of the popup */
+.popup-container {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.popup-containerimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-content {
+  display:flex;
+  width: 80%;
+  height: 60%;
+  background-color: #f5f5f5;
+}
+
+.image-container {
+  position: relative;
+  height: 100%;
+}
+
+.popup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem deformação */
+}
+.text-container {
+  position: relative; /* Ensures child elements can be positioned relative to this container */
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  padding-top: 15px;
+  background-color: lightgray;
+}
+
+.close-button {
+  position: absolute; /* Position it relative to the nearest ancestor with position: relative */
+  right: 10px; /* Align to the right edge of the text-container */
+  top: 10px; /* Align to the top edge of the text-container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: transparent;
+  z-index: 9999; /* Ensure it stays above the content */
+}
+
+.close-button img {
+  height: 20px;
+  width: 20px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.close-button:hover img {
+  height: 22px;
+  width: 22px;
+}
+
+.text-container #data {
+  font-size: 17px;
+  font-weight: bold;
+  color: rgb(37, 37, 37);
+  margin-bottom: 20px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+/*STYLE DO MAPA- METADADO LOCALIZACAO----------------------------------*/
+
+.map-container {
+  width: 100%; /* Largura total */
+  margin: 0; /* Remove qualquer margem */
+  padding: 0; /* Remove qualquer padding */
+  position:relative;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 
+  -10px -10px 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-container:hover {
+  transform: translateY(-8px) scale(1); /* Eleva o div e faz um leve aumento */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3), 
+            -10px -10px 10px rgba(255, 255, 255, 0.2);
+
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%; /* Largura total */
+  height: 100px; /* Altura fixa para o mapa - ajuste conforme necessário */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse a área */
+}
+
+.map-img {
+  width: 100%; /* Largura total do mapa */
+  height: 100%; /* Ajusta para preencher a altura do contêiner */
+  object-fit: cover; /* Mantém a proporção da imagem preenchendo a área */
+  display: block; /* Remove espaço em elementos inline */
+}
+
+.pin-img {
+  position: absolute;
+  top: 40%; /* Ajuste conforme necessário */
+  left: 50%; /* Centraliza horizontalmente */
+  width: 30px; /* Tamanho do pin */
+  transform: translate(-50%, -50%); /* Centraliza o pin */
+  cursor: pointer;
+  display: block;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.pin-img:hover {
+  width: 40px; /* Aumenta largura */
+  height: 40px;
+}
+
+/* Estilo do tooltip */
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  visibility: hidden; /* Inicialmente invisível */
+  pointer-events: none; /* Impede que o tooltip interfira na interação com outros elementos */
+  z-index: 9999; /* Maior que o z-index do mapa */
+  font-size: 12px; /* Ajuste opcional */
+}
+
+.location-text {
+  background-color: rgb(235, 235, 235); /* Fundo cinzento */
+  margin: 0; /* Remove qualquer margem */
+  padding: 5px; /* Espaço interno para o texto */
+}
+
+.detalhes-tec {
+  font-family: Arial, sans-serif; /* Fonte limpa e moderna */
+  background-color: lightgray; /* Fundo claro */
+  border-radius: 10px; /* Cantos arredondados */
+  padding: 20px; /* Espaçamento interno */
+  background-color: rgb(235, 235, 235);
+  max-width: 600px; /* Largura máxima */
+  margin: 20px auto; /* Centralizar horizontalmente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  gap: 10px; /* Espaçamento entre linhas e colunas */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 
+  -10px -10px 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.detalhes-tec:hover {
+  transform: translateY(-8px) scale(1); /* Eleva o div e faz um leve aumento */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3), 
+            -10px -10px 10px rgba(255, 255, 255, 0.2);
+
+}
+
+
+.metadados-dispositivo {
+  background-color: #555; /* Fundo escuro */
+  color: white; /* Cor do texto para contraste */
+  text-align: center; /* Centralizar o texto */
+  padding: 10px; /* Espaçamento interno */
+  font-weight: bold; /* Destacar o texto */
+  border-radius: 5px; /* Cantos arredondados */
+}
+
+#emocao {
+  font-weight: bold;
+  font-size:large;
+}
+
+.emocao-container img {
+  width: 60px;
+  height: 60px;
+}
+
+.emocao-container {
+  background-color: rgb(235, 235, 235);
+  border-radius: 30px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center;  /* Alinha o emoji e o texto verticalmente */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 
+  -10px -10px 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 15px;
+}
+
+.emocao-container:hover {
+  transform: translateY(-8px) scale(1); /* Eleva o div e faz um leve aumento */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3), 
+            -10px -10px 10px rgba(255, 255, 255, 0.2);
+
+}
+
+.emoji {
+  width: 25px;  /* Ajuste o tamanho do emoji conforme necessário */
+  height: 25px;
+  margin-right: 10px;  /* Espaço entre o emoji e o texto */
+}
+
+#emocao {
+  font-size: 20px;  /* Tamanho do texto */
+  font-weight: bold;
+}
+
+.info-icon {
+  font-size: 18px;
+  color: #007BFF;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 3px 6px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.info-tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 14px;
+  position: absolute;
+  z-index: 9;
+  top: 95%;
+  left: 25%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: max-content;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+.info-icon:hover {
+  background-color: #007BFF;
+  color: #fff;
+  transform: scale(1.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.info-icon:hover + .info-tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.text-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  padding-top: 15px;
+  background-color: lightgray;
+}
+  
+.popup-container h2 {
+  margin-bottom: 20px;
+}
+  
+.popup-container input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+.popup-container button {
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#pessoas {
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.pessoas-container {
+  margin-top: 15px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 
+  -10px -10px 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pessoas-container:hover {
+  transform: translateY(-8px) scale(1); /* Eleva o div e faz um leve aumento */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3), 
+            -10px -10px 10px rgba(255, 255, 255, 0.2);
+
+}
+
+  

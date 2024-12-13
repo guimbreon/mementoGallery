@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memento Gallery</title>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/popUpAddImage.css">
+    <link rel="stylesheet" href="../css/share.css">
+    <link rel="stylesheet" href="../css/popUpCreateNewFolder.css">
+    <link rel="stylesheet" href="../css/popUpGoogleDrive.css">
+    <link rel="stylesheet" href="../css/popUpHomeGeral.css">
+    <link rel="stylesheet" href="../css/popUpConf.css">
+    <link rel="stylesheet" href="../css/pop-up.css">
+    <link rel="stylesheet" href="../css/lixo.css">
+    <link rel="icon" type="image/png" href="../images/iconGallery.png">
+</head>
+<body>
+    <header>
+        <a><img id="iconGallery" src="../images/iconGallery.png" alt="Icon of Memento Gallery"></a>
+        <a href="../index.html" id="headerLink">
+            <h1>Memento Gallery</h1>
+        </a>
+        <div class="header-right">
+            <div class="profile-icon" id="profileIcon">
+                <img src="../images/icons/user.png" alt="User Icon">
+            </div>            
+            <div class="profile-pop" id="profilePop">
+                <ul>
+                    <li><a href="../profile/profile.html">Profile</a></li>
+                    <li><a href="../configuracoes/settings.html">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <ul class="menu" id="sideMenu">
+                <li class="album-main">Albums <img src="../images/icons/up.png" class="arrow" alt="Arrow"></li>
+                <ul class="menu" id="albumList">
+                </ul>
+                <li class="lixo"><a href="lixoAlbum.html">Trash</a><img id="trashIcon" src="../images/icons/white-trash.png"></li>
+            </ul>
+        </aside>
+
+        <main>
+            <section id="pop-up"></section>
+            <section id="trashMenu"></section>
+            
+        </main>
+    </div>
+
+    <script src="../scripts/albumData/allPictures.js"></script>
+    <script src="../scripts/albumData/Natureza.js"></script>
+    <script src="../scripts/albumData/Wallpaper PC.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/sideBarGen.js"></script>
+    <script src="../scripts/imgManipulation.js"></script>
+    <script src="../scripts/profile-pop.js"></script>
+    <script src="../scripts/lixo.js"></script>
+    <script src="../scripts/lixo-geral.js"></script>
+    <script src="../scripts/popUpFolder.js"></script>
+</body>
+</html>

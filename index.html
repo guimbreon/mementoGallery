@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Memento Gallery</title>
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/pop-up.css">
+    <link rel="stylesheet" href="css/popUpGoogleDrive.css">
+    <link rel="stylesheet" href="css/popUpHomeGeral.css">
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="stylesheet" href="css/popUpAddImage.css">
+    <link rel="stylesheet" href="css/popUpCreateNewFolder.css">
+    <link rel="icon" type="image/png" href="images/iconGallery.png">
+</head>
+<body>
+    <header>
+        <img id="iconGallery" src="images/iconGallery.png" alt="Icon of Memento Gallery">
+        <h1>Memento Gallery</h1>
+        <div class="header-right">
+            <div class="profile-icon" id="profileIcon">
+                <img src="images/icons/user.png" alt="User Icon">
+            </div>            
+        <div class="profile-pop" id="profilePop">
+            <ul>
+                <li><a href="profile/profile.html">Profile</a></li>
+                <li><a href="configuracoes/settings.html">Settings</a></li>
+            </ul>
+        </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <ul class="menu" id="sideMenu">
+                <li class="album-main">Albums <img src="images/icons/up-white.png" class="arrow" alt="Arrow"></li>
+                <ul class="menu" id="albumList">
+                </ul>
+                <li class="lixo"><a href="lixo/lixoAlbum.html">Trash</a> <img src="images/icons/white-trash.png" alt="Trash Icon" id="trashIcon"></li>
+            </ul>
+        </aside>
+
+        <main>
+            <section id="pop-up"></section>
+            <section class="albums">
+                <h3>Most Recent Albums</h3>
+                <div class="album-list">   
+                </div>
+            </section>
+
+            <hr>
+
+        <section class="photos">
+        </section>
+        </main>
+
+        <!-- Floating Action Button (FAB) -->
+        <div class="fab-container">
+            <button class="fab main-fab" id="plus"><img src="images/icons/plus.png"></button>
+
+            <button class="fab hidden" id="trash"><a href="lixo/lixo.html"><img src="images/icons/black-trash.png"></a></button>
+            <button class="fab hidden" id="share"><img src="images/icons/share.png"></button>
+            <button class="fab hidden" id="add-folder"><img src="images/icons/add-folder.png"></button>
+            <button class="fab hidden" id="upload"><img src="images/icons/upload.png"></button>
+        </div>
+    </div>
+
+    <script src="scripts/albumData/allPictures.js"></script>
+    <script src="scripts/albumData/Natureza.js"></script>
+    <script src="scripts/albumData/GoogleDrive.js"></script>
+    <script src="scripts/albumData/iCloud.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/popUpFolder.js"></script>
+    <script src="scripts/popUpImage.js"></script>
+    <script src="scripts/popUpImport.js"></script>
+    <script src="scripts/sideBarGen.js"></script>
+    <script src="scripts/lastAlbuns.js"></script>
+    <script src="scripts/profile-pop.js"></script>
+    <script src="scripts/genAllPictures.js"></script> <!--Only for index.html-->
+    <script src="scripts/share.js"></script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+/* color.css */
+
+/* Sidebar and text colors */
+
+header {
+    background-color: #1f1f1f; /* Dark charcoal */
+    color: #FFFFFF; /* White for high contrast */
+    max-height: 120px;
+}
+
+header h1{
+    letter-spacing: 5px;
+    font-size: 40px;
+}
+
+.sidebar {
+    background-color: #2c2c2c; /* Slightly lighter charcoal */
+    border-right: 1px solid #333333; /* Slightly darker for subtle contrast */
+    color: #FFFFFF; /* White text */
+}
+
+.menu li {
+    color: #B0B0B0; /* Soft light gray */
+}
+
+.menu li.album-main {
+    font-weight: bold;
+    color: #FFFFFF; /* White for active item */
+}
+
+.menu li.lixo {
+    font-weight: bold;
+    color: #FFFFFF; /* White for active item */
+}
+
+.menu li:hover {
+    background-color: #444444; /* Darker gray for hover */
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.lixo a{
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+}
+header a{
+    text-decoration: none;
+    color: #f0e9e9;
+    display: block;
+}
+
+/* Search bar and profile icon colors */
+.search-bar input {
+    border: 1px solid #333333; /* Dark gray for input border */
+    color: #2c2c2c; /* Dark gray for text */
+    background-color: #F0F0F0; /* Light gray background for subtle contrast */
+}
+
+.search-bar button {
+    color: #333333; /* Dark gray for icon */
+}
+
+.profile-icon {
+    color: #F0F0F0; /* Light gray */
+}
+
+/* Album and photo colors */
+.add-photo {
+    border: 2px dashed #F0F0F0; /* Light gray dashed border */
+    color: #F0F0F0; /* Light gray text */
+}
+
+/* Floating Action Button (FAB) colors */
+.fab {
+    background-color: #e14c4c; /* Vibrant orange */
+    color: #FAFAFA; /* White for icon in FAB */
+}
+
+.fab:hover {
+    background-color: #FF8C00; /* Lighter orange on hover */
+}
+
+/* Trash icon */
+.trash-icon {
+    color: #EC3D00; /* Vibrant orange */
+}
+
+.light-theme {
+    color: #333333; 
+}
+
+.light-theme header {
+    background-color: #dddddd; 
+    color: #000000 ; 
+}
+
+.light-theme header h1 {
+    color:#000000;
+}
+
+.light-theme .sidebar {
+    background-color: #e6e6e6; 
+    color: #000000; 
+    border-right: 1px #e6e6e6;
+}
+
+.light-theme .menu li{
+    color: #000000;
+}
+
+.light-theme .lixo a{
+    color:#000000;
+}
+
+.dark-theme {
+    background-color:#333333; 
+    color: #ffffff; 
+}
+
+.dark-theme header {
+    background-color: #1f1f1f; 
+    color: #ffffff; 
+}
+
+.dark-theme .sidebar {
+    background-color: #2c2c2c; 
+    color: #ffffff; 
+}
+
+.dark-theme .album p {
+    color: #c7c7c7; 
+}
+
+.dark-theme .text-container{
+    background-color:#1f1f1f;
+}
+
+.dark-theme .album p{
+    color: #c7c7c7; 
+}
+
+.dark-theme .text-container #data{
+    color:white;
+}
+
+.dark-theme .location-text{
+    color:black;
+}
+
+.dark-theme .emocao-container{
+    color:white;
+    background-color:#333333;
+}
+
+.dark-theme .detalhes-tec{
+    color:white;
+    background-color:#333333;
+}
+
+.dark-theme .metadados-dispositivo{
+    background-color:#444444;
+}
+
+.dark-theme .info-tooltip{
+    background-color:black;
+}
+
+.dark-theme .popup-container-Filtros{
+    background-color:#3a3a3a;
+    color:white;
+}
+
+.dark-theme .confirmation-container h2{
+    color:black;
+}
+
+.dark-theme #pessoas{
+    background-color:#333333;
+}
+
+.dark-theme .location-text{
+    color:white;
+    background-color:#333333;
+}
+
+.dark-theme .map-container {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 
+    -10px -10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+.dark-theme .map-container:hover {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3), 
+              -10px -10px 10px rgba(0, 0, 0, 0.2);
+  
+  }
+
+.dark-theme .detalhes-tec {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 
+    -10px -10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+.dark-theme .detalhes-tec:hover {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3), 
+              -10px -10px 10px rgba(0, 0, 0, 0.2);
+  
+  }
+
+.dark-theme .emocao-container:hover {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3), 
+              -10px -10px 10px rgba(0, 0, 0, 0.2);
+  }
+
+.dark-theme .emocao-container {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 
+    -10px -10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+.dark-theme .popUpFotosGerais{
+    background-color:#3a3a3a;
+}
+.dark-theme .popUpDuplicateFotos{
+    background-color:#3a3a3a;
+}
+.dark-theme .duplicate-container{
+    background-color:#3a3a3a;
+}
+
+.dark-theme .duplicate-group{
+    background-color:#686868;
+}
+
+.dark-theme .popup-container {
+    background-color:#3a3a3a;
+}
+
+.dark-theme .popup-container h2{
+    color:white;
+}
+
+.dark-theme .popup-container {
+    background-color:#3a3a3a;
+}
+
+.dark-theme .popup-container h2{
+    color:white;
+}
+
+.dark-theme .popUpcontainer {
+    background-color:#3a3a3a;
+}
+
+.dark-theme .popUpcontainer h2{
+    color:white;
+}
+
+.dark-theme .tittle-import{
+    background-color:#202020;
+}
+
+.dark-theme .photo-item{
+    background-color:#686868
+}
+
+.dark-theme .profile-grid div{
+    color:white;
+}
+
+.dark-theme .popUpAddImage{
+    background-color:#202020;
+}
+
+.dark-theme .popUpAddImage h2{
+    color:white;
+}
+.custom-button {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  
+.custom-button:hover {
+    transform: scale(1.1);
+}
+  
+.custom-button.active { 
+    border: 3px solid #e14c4c; 
+}
+
+
+
+
+.theme-default {
+    color:white;
+    background: linear-gradient(
+        to right,
+        #1f1f1f,
+        #2c2c2c,
+        #FFFFFF
+    )
+}
+
+.theme-light{
+    color:black;
+    background: linear-gradient(
+        to right,
+        #dddddd,
+        #e6e6e6,
+        white
+    )
+}
+
+.theme-dark{
+    color: white;
+    background: linear-gradient(
+        to right,
+        #1f1f1f,
+        #2c2c2c,
+        #333333
+    )
+}
+
+.back-arrow button {
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.back-arrow img {
+    width: 60px; 
+    height: auto; 
+    display: block; 
+}
+
+
+.back-arrow {
+    position: fixed; 
+    top: 100px; 
+    left: 20px; 
+    z-index: 10; 
+}
+
+.theme-hidden {
+    display:none;
+    color:black;
+    background-size:100% 100%;
+    background-position: center;
+    background-repeat: no repeat;
+    background-image:url("../images/icons/ignorar/imagem_2024-11-28_152738517.png")
+}
+
+.hidden-theme header{
+    background-image:url("../images/icons/ignorar/imagem_2024-11-28_152738517.png");
+    background-size:100% 100%;
+    color:black;
+    background-color:#B0B0B0;
+}
+
+.hidden-theme .sidebar{
+    background-image:url("../images/icons/ignorar/imagem_2024-11-28_152738517.png");
+    background-size:100% 100%;
+    color:black;
+    background-color:#B0B0B0;
+    border-right: 1px #B0B0B0;
+}
+
+.hidden-theme{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../images/icons/ignorar/imagem_2024-11-28_152738517.png");
+    background-size:100% 100%;
+    color:black;
+    background-color:#B0B0B0;
+}
+
+.hidden-theme .menu li{
+    color: #000000;
+}
+
+.hidden-theme header h1 {
+    color:#000000;
+}
+
+

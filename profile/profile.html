@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/pop-up.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="icon" type="image/png" href="../images/iconGallery.png">
+</head>
+
+<body>
+    <header>
+        <img id="iconGallery" src="../images/iconGallery.png" alt="Icon of Memento Gallery">
+        <a href="../index.html"><h1>Memento Gallery</h1></a>
+        <div class="header-right">
+            <div class="profile-icon" id="profileIcon">
+                <img src="../images/icons/user.png" alt="User Icon">
+            </div>
+        </div>
+        <div class="profile-pop" id="profilePop">
+            <ul>
+                <li><a href="../profile/profile.html">Profile</a></li>
+                <li><a href="../configuracoes/settings.html">Settings</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="profile-card">
+        <div class="profile-header">
+            <img class="profile-photo" src="../images/icons/user.png" alt="Profile Photo">
+            <div class="profile-details">
+                <h2 class="profile-name">André Andrade</h2>
+                <p class="profile-description">Lover of photography, art enthusiast, and part-time traveler. Always looking for the next adventure.</p>
+            </div>
+        </div>
+    </div>
+        <div class="friends-list">
+            <h3>Friends</h3>
+            <div class="profile-grid">
+                <div><img class="profile-pic" src="../images/friends/mom.jpg" alt="Mom">Mom</div>
+                <div><img class="profile-pic" src="../images/friends/dad.jpg" alt="Dad">Dad</div>
+                <div><img class="profile-pic" src="../images/friends/dani.jpg" alt="Dani">Dani</div>
+                <div><img class="profile-pic" src="../images/friends/frank.jpg" alt="Frank">Frank</div>
+            </div>
+        </div>
+    </div>
+    <div class="back-arrow">
+        <button onclick="goBack()">
+            <img src="../images/icons/black-arrow.png" alt="Voltar" id="backArrow"/>
+        </button>
+    </div>
+
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/changecolor.js"></script>
+    <script src="../scripts/profile-pop.js"></script>
+    <script src="../scripts/settingsArrow.js"></script>
+</body>
+</html>
+
