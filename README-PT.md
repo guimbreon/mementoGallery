@@ -2,6 +2,9 @@
 
 Este README também está disponível em [Inglês](README.md).
 
+Project made by:
+[Guilherme Soares](https://github.com/guimbreon) && [Vitória Correia](https://github.com/vitoriateixeiracorreia)
+
 # Memento Gallery
 
 Memento Gallery é uma aplicação de galeria de fotos que permite aos usuários gerenciar e visualizar suas coleções de fotos. A aplicação suporta vários recursos, como álbuns, configurações, perfil, lixeira, importação de fotos e compartilhamento.
